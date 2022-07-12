@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Calculator-with-transparent-background</title>
+        <link rel="stylesheet" href="style.css">
+        <script src="./js-support-file/calc-type.js"></script>
+
+    </head>
+    <body>
+        <div class="box">
+            <button class="button" id="Simple" onclick="my1()">Simple</button>
+            <!-- <button class="button" id="Programmable" onclick="my2()">Programmable</button> --><!-- Under Development-->
+            <button class="button" id="Scientific" onclick="my3()">Scientific</button>
+        </div>
+        <div class="box" id="b1" >
+            <form name="form1"> 
+                <input type="text" name="answer">
+                <div class="buttons">
+                    <input type="button" value="C" onclick="form1.answer.value = ''">
+                    <input type="button" value="DEL" onclick="form1.answer.value= form1.answer.value.substr(0,form1.answer.value.length - 1)">
+                    <input type="button" value="%" onclick="form1.answer.value+='%'">
+                    <input type="button" value="/" onclick="form1.answer.value+='/'">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="7" onclick="form1.answer.value += '7'">
+                    <input type="button" value="8" onclick="form1.answer.value+='8' ">
+                    <input type="button" value="9" onclick="form1.answer.value+='9'">
+                    <input type="button" value="*" onclick="form1.answer.value+='*'">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="4" onclick="form1.answer.value+='4'">
+                    <input type="button" value="5" onclick="form1.answer.value+='5' ">
+                    <input type="button" value="6" onclick="form1.answer.value+='6'">
+                    <input type="button" value="-" onclick="form1.answer.value+='-'">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="1" onclick="form1.answer.value+='1'">
+                    <input type="button" value="2" onclick="form1.answer.value+='2' ">
+                    <input type="button" value="3" onclick="form1.answer.value+='3'">
+                    <input type="button" value="+" onclick="form1.answer.value+='+'">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="0" onclick="form1.answer.value+='0'">
+                    <input type="button" value="00" onclick="form1.answer.value+='00' ">
+                    <input type="button" value="." onclick="form1.answer.value+='.'">
+                    <input type="button" value="=" onclick="form1.answer.value=eval(form1.answer.value)">
+                </div>
+            </form>
+
+        </div>
+        <div class="box2" id="b2" style="display: none;" >
+            <form name="form2"> 
+                <input type="text" name="answer" >
+                <div class="buttons">
+                    <input type="button" value="or" onclick="form2.answer.value += 'or'">
+                    <input type="button" value="xor" onclick="form2.answer.value += 'nor'">
+                    <input type="button" value="HEX" onclick="form2.answer.value+=''">
+                    <input type="button" value="DEC" onclick="form2.answer.value+=''">
+                    <input type="button" value="OCT" onclick="form2.answer.value+=''">
+                    <input type="button" value="BIN" onclick="form2.answer.value+=''">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="and" onclick="form2.answer.value += 'and'">
+                    <input type="button" value="not" onclick="form2.answer.value+='not' ">
+                    <input type="button" value="C" onclick="form2.answer.value = ''">
+                    <input type="button" value="DEL" onclick="form2.answer.value= form2.answer.value.substr(0,form2.answer.value.length - 1)">
+                    <input type="button" value="%" onclick="form2.answer.value+='%'">
+                    <input type="button" value="/" onclick="form2.answer.value+='/'">
+                </div>
+                
+                <div class="buttons">
+                    <input type="button" value="A" onclick="form2.answer.value += 'A'">
+                    <input type="button" value="B" onclick="form2.answer.value += 'B'">
+                    <input type="button" value="7" onclick="form2.answer.value += '7'">
+                    <input type="button" value="8" onclick="form2.answer.value+='8' ">
+                    <input type="button" value="9" onclick="form2.answer.value+='9'">
+                    <input type="button" value="*" onclick="form2.answer.value+='*'">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="C" onclick="form2.answer.value += 'C'">
+                    <input type="button" value="D" onclick="form2.answer.value += 'D'">
+                    <input type="button" value="4" onclick="form2.answer.value+='4'">
+                    <input type="button" value="5" onclick="form2.answer.value+='5' ">
+                    <input type="button" value="6" onclick="form2.answer.value+='6'">
+                    <input type="button" value="-" onclick="form2.answer.value+='-'">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="E" onclick="form2.answer.value += 'E'">
+                    <input type="button" value="F" onclick="form2.answer.value += 'F'">
+                    <input type="button" value="1" onclick="form2.answer.value+='1'">
+                    <input type="button" value="2" onclick="form2.answer.value+='2' ">
+                    <input type="button" value="3" onclick="form2.answer.value+='3'">
+                    <input type="button" value="+" onclick="form2.answer.value+='+'">
+                </div>
+                <div class="buttons">
+                    <input type="button" value="(" onclick="form2.answer.value += '('">
+                    <input type="button" value=")" onclick="form2.answer.value += ')'">
+                    <input type="button" value="0" onclick="form2.answer.value+='0'">
+                    <input type="button" value="00" onclick="form2.answer.value+='00' ">
+                    <input type="button" value="." onclick="form2.answer.value+='.'">
+                    <input type="button" value="=" onclick="form2.answer.value=eval(form2.answer.value)">
+                </div>
+            </form>
+
+        </div>
+        <div class="box2" id="b3" style="display: none;" >
+                <input type="text"  id="answer">
+                <div class="buttons">
+                    <button class="button1">C</button>
+                    <button class="button1">DEL</button>
+                    <button class="button1">=</button>
+                    <button class="button1">1</button>
+                    <button class="button1">2</button>
+                    <button class="button1">3</button>
+                </div>
+                <div class="buttons">
+                    <button class="button1">(</button>
+                    <button class="button1">)</button>
+                    <button class="button1">x !</button>
+                    <button class="button1">4</button>
+                    <button class="button1">5</button>
+                    <button class="button1">6</button>
+                </div>
+                
+                <div class="buttons">
+                    <button class="button1">ln</button>
+                    <button class="button1">e</button>
+                    <button class="button1">+</button>
+                    <button class="button1">7</button>
+                    <button class="button1">8</button>
+                    <button class="button1">9</button>
+                </div>
+                <div class="buttons">
+                    <button class="button1">x^</button>
+                    <button class="button1">*</button>
+                    <button class="button1">/</button>
+                    <button class="button1">±</button>
+                    <button class="button1">0</button>
+                    <button class="button1">.</button>
+                </div>
+                <div class="buttons">
+                    <button class="button1">x ²</button>
+                    <button class="button1">log</button>
+                    <button class="button1">cos</button>
+                    <button class="button1">-</button>
+                    <button class="button1">√</button>
+                    <button class="button1">sin</button>
+                </div>
+                <div class="buttons">
+                    <button class="button1">tan</button>
+                    <button class="button1">%</button>
+                    <button class="button1">&#x003C0;</button>
+                    <button class="button1">∘</button>
+                    <button class="button1">rad</button>
+                    <button class="button1">&nbsp;</button>
+                </div>
+                <script src="./js-support-file/scientific.js"></script>
+        </div>
+    </body>
+</html>
